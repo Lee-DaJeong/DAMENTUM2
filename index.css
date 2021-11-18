@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로정렬 */
+    align-items: center; /* 세로정렬 */
+
+    background: url(./images/bg01.jpg);
+    background-size: cover; /*안깨지게, 화면에 맞게 설정*/
+}
+
+.clock {
+    color: #ffffff;
+    font-size: 6rem; 
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /* em, rem 크기 상대적인 요소들 
+    em은 상위 객체의 폰트사이즈에 영향을 받는다
+    html 16px 기본값 1em: 16px, 2em: 32px
+    em은 div 상에서 첫번째에 있는 요소의 폰트 크기를 따라간다
+    rem은 최상위 객체만 바라보는 요소*/
+}
+
+.name-form {
+    position: absolute;
+    bottom: 30px;
+    width: 30%;
+    transition: opacity 1s;
+}
+
+.name-input {
+    all: unset;
+    text-align: center; /*중앙 정렬*/
+
+    width: 100%; /*main만 수정하면 자식 요소들이 그에 맞게 수정됨*/
+    padding-bottom: 12px;
+    border-bottom: solid 2px #fff; 
+    /*solid는 보더의 타입 점선, 두 줄, 한 줄, ...
+    px은 두께
+    그리고 색상!*/
+
+    color: #ffffff;
+    font-size: 2rem;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.name-input::placeholder {
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.name {
+    position: absolute;
+    bottom: 30px;
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    transition: opacity 1s;
+
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn {
+    all: unset;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 30px;
+  
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.hide {
+    opacity: 0; 
+    z-index: -1;
+}
+
+.weather-wrapper {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+
+    width: 60px;
+    height: 60px;
+    color: white;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-wrapper > p {
+    font-weight: bold;
+    font-size: 15px;
+}
