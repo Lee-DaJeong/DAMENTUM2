@@ -17,10 +17,6 @@ function getWeather(lat, lon) {
     });
 }
 
-// function getWeather(lat, lon) {
-//     const result = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=003e227425d9d73f54ef80ac036d515c`);
-//     console.log(result.json());
-// }
 
 function handleGetGeo(position) {
     console.log(position);
