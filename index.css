@@ -29,7 +29,7 @@
 
 .name-form {
     position: absolute;
-    bottom: 30px;
+    bottom: 100px;
     width: 30%;
     transition: opacity 1s;
 }
@@ -55,7 +55,7 @@
 
 .name {
     position: absolute;
-    bottom: 30px;
+    bottom: 100px;
     font-size: 3rem;
     color: #fff;
     text-shadow: 0 1px 5px rgba(0,0,0,0.1);
@@ -101,6 +101,70 @@
     font-size: 15px;
 }
 
+.focus-form {
+    position: absolute;
+    bottom: 30px;
+    width: 30%;
+    transition: opacity 1s;
+}
+
+.focus-input {
+    all: unset;
+    text-align: center; 
+
+    width: 100%; 
+    padding-bottom: 12px;
+    border-bottom: solid 2px #fff; 
+
+    color: #ffffff;
+    font-size: 2rem;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.focus-input::placeholder {
+    color: white;
+    opacity: 0.6;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.focus-wrapper {
+    position: absolute;
+    bottom: 30px;
+    transition: opacity 1s;
+}
+
+.focus-wrapper > span {
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.focus {
+    line-height: 80%;
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn-f {
+    all: unset;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 30px;
+  
+    text-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.hide-f {
+    opacity: 0;
+    z-index: -1;
+}
+
 @media screen and (max-width: 415px) { /*모바일 사이즈*/
     html {
         font-size: 10px;
@@ -109,13 +173,13 @@
     .clock {
         font-size: 6rem;
     }
-
-  
-
 }
 
 @media screen and (max-width: 768px) { /*태블릿사이즈*/
     .name-form {
+        width: 62%;
+    }
+    .focus-form{
         width: 62%;
     }
 }

@@ -10,7 +10,8 @@
     </head>
     <body>
         <div class="main">
-            <h1 class="clock js-clock">13:11:00</h1>
+            <h1 class="clock js-clock">00:00:00</h1>
+
             <form class="name-form js-name-form">
                 <input
                 class="name-input js-name-input" 
@@ -21,15 +22,27 @@
 
             <h2 class="name js-name hide"></h2>
 
+            <form class="focus-form js-focus-form">
+                <input
+                class="focus-input js-focus-input" 
+                placeholder="main focus for today?" 
+                type="text"
+                />
+            </form>
+
+            <div class="focus-wrapper hide js-focus-wrapper">
+                <span>Main focus</span>
+                <h2 class="focus js-focus"></h2>
+            </div>
+
             <div class="weather-wrapper">
                 <p class="js-weather">100℃</p>
             </div>
         </div>
-
-
     
         <script src="time.js"></script>
         <script src="name.js"></script>
         <script src="weather.js"></script>
+        <script src="focus.js"></script>
     </body>
 </html>
